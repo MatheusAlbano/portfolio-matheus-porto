@@ -741,9 +741,28 @@ body {
 
 /* Estilos para telas menores que 768px (celulares) */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
     #header {
         flex-direction: column;
         padding: 10px;
+    }
+
+    .header-title h1 {
+        font-size: 1.6rem;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: var(--color-black);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
     }
 
     .navbar ul {
@@ -753,6 +772,10 @@ body {
 
     .navbar ul li {
         margin: 10px 0;
+    }
+
+    .navbar.active {
+        display: flex;
     }
 
     #person {

@@ -28,3 +28,7 @@ window.addEventListener('scroll', () => {
         header.style.background = 'transparent'
     }
 });
+
+function toggleMenu() {
+    document.querySelector(".navbar").classList.toggle("active");
+}
