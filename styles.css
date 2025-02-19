@@ -904,6 +904,12 @@ body {
         height: auto;
     }
 
+    .contact-info {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
     .contact-icons-wrapper {
         flex-direction: row;
     }
