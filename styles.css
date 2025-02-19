@@ -738,3 +738,213 @@ body {
         left: 100%;
     }
 }
+
+/* Estilos para telas menores que 768px (celulares) */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    #person {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .person-content, .person-background {
+        width: 100%;
+        height: auto;
+    }
+
+    .person-name {
+        margin-top: 5rem;
+    }
+
+    .stacks-content {
+        margin-top: 3rem;
+    }
+
+    .wrapper-profile-photo {
+        width: 100%;
+        height: auto;
+    }
+
+    .profile-photo {
+        width: 200px;
+        height: 200px;
+    }
+
+    #about {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .background-about, .box-about {
+        width: 100%;
+    }
+
+    .box-about {
+        padding: 1rem;
+    }
+
+    .projects-title h2 {
+        font-size: 2rem;
+    }
+
+    .swiper {
+        height: auto;
+    }
+
+    .card-project {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-icons-wrapper {
+        flex-direction: column;
+    }
+
+    .contact-icon-content {
+        margin: 1rem 0;
+    }
+}
+
+/* Estilos para telas entre 768px e 1024px (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    #header {
+        padding: 10px 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+    }
+
+    .person-content, .person-background {
+        width: 50%;
+    }
+
+    .person-name {
+        margin-top: 8rem;
+    }
+
+    .stacks-content {
+        margin-top: 4rem;
+    }
+
+    .wrapper-profile-photo {
+        width: 80%;
+    }
+
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+
+    #about {
+        flex-direction: row;
+    }
+
+    .background-about, .box-about {
+        width: 50%;
+    }
+
+    .box-about {
+        padding: 2rem;
+    }
+
+    .projects-title h2 {
+        font-size: 2.5rem;
+    }
+
+    .swiper {
+        height: auto;
+    }
+
+    .card-project {
+        width: 80%;
+        height: auto;
+    }
+
+    .contact-icons-wrapper {
+        flex-direction: row;
+    }
+
+    .contact-icon-content {
+        margin: 0 2rem;
+    }
+}
+
+/* Estilos para telas maiores que 1024px (computadores) */
+@media (min-width: 1024px) {
+    #header {
+        padding: 15px 30px;
+    }
+
+    .navbar ul {
+        flex-direction: row;
+    }
+
+    .person-content, .person-background {
+        width: 50%;
+    }
+
+    .person-name {
+        margin-top: 11rem;
+    }
+
+    .stacks-content {
+        margin-top: 6rem;
+    }
+
+    .wrapper-profile-photo {
+        width: 433px;
+    }
+
+    .profile-photo {
+        width: 350px;
+        height: 350px;
+    }
+
+    #about {
+        flex-direction: row;
+    }
+
+    .background-about, .box-about {
+        width: 50%;
+    }
+
+    .box-about {
+        padding: 3rem;
+    }
+
+    .projects-title h2 {
+        font-size: 3rem;
+    }
+
+    .swiper {
+        height: 500px;
+    }
+
+    .card-project {
+        width: 320px;
+        height: 450px;
+    }
+
+    .contact-icons-wrapper {
+        flex-direction: row;
+    }
+
+    .contact-icon-content {
+        margin: 0 3rem;
+    }
+}
