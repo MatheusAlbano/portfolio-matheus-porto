@@ -825,6 +825,20 @@ body {
         font-size: 2rem;
     }
 
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px; /* Ajusta o espaçamento */
+        padding: 10px;
+    }
+
+    .project-card {
+        width: 90%; /* Garante que não fiquem muito pequenos */
+        max-width: 400px; /* Evita que fiquem muito largos */
+        text-align: center; /* Alinha o conteúdo no centro */
+    }
+
     .swiper {
         height: auto;
     }
@@ -840,6 +854,28 @@ body {
 
     .contact-icon-content {
         margin: 1rem 0;
+    }
+
+    .contact-container {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .contact-form {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px; /* Melhora a leitura no celular */
+    }
+
+    .contact-form button {
+        width: 100%; /* Garante que o botão ocupe toda a largura do formulário */
+        font-size: 16px;
     }
 }
 
