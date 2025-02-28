@@ -492,8 +492,8 @@ body {
 .card-project {
     /* width: 320px; */
     /* height: 450px; */
-
-    height: 100%;
+    min-height: 300px; /* Ajuste conforme necessário */
+    height: auto;
     width: 100%;
 
     padding: 30px 20px 20px;
