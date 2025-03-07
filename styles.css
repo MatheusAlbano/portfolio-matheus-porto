@@ -775,6 +775,7 @@ body {
 
     #header {
         flex-direction: column;
+        height: 100px; /* Altura menor para mobile */
         padding: 10px;
         background: #191919; /* Fundo escuro para melhor contraste */
     }
@@ -829,7 +830,8 @@ body {
     #person {
         flex-direction: column;
         height: auto;
-        padding: 20px;
+        padding-top: 50px;
+        /* padding: 20px; */
     }
 
     .person-content {
