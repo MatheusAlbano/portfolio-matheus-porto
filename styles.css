@@ -55,10 +55,26 @@ body {
     opacity: .8;
 } 
 
+.menu-toggle {
+    display: none; /* Esconder em telas maiores */
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--color-white);
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
 .navbar {
     max-width: 350px;
     width: 100%;
 }
+
 
 .navbar ul {
     display: flex;
@@ -740,44 +756,74 @@ body {
     }
 }
 
+
 /* Estilos para telas menores que 768px (celulares) */
 @media (max-width: 768px) {
+
+    .box-about h3 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte */
+    }
+
+    .box-about h4 {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    }
+
     .menu-toggle {
-        display: block;
+        display: flex;
         color: var(--color-white);
     }
 
     #header {
         flex-direction: column;
         padding: 10px;
+        background: #191919; /* Fundo escuro para melhor contraste */
     }
 
     .header-title h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem; /* Título menor */
+        margin-bottom: 10px;
     }
 
     .navbar {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background: var(--color-black);
         position: absolute;
         top: 60px;
-        left: 0;
-        padding: 10px 0;
+        right: 0;
+        width: 100%;
+        background: #333;
+        flex-direction: column;
+        align-items: center;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+        padding: 20px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar.active {
+        transform: translateX(0);
     }
 
     .navbar ul {
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        padding: 0; /* Remover padding padrão */
     }
 
     .navbar ul li {
-        margin: 10px 0;
+        margin: 15px 0; /* Espaçamento entre os itens */
+        text-align: center;
     }
 
-    .navbar.active {
-        display: flex;
+    .navbar ul li a {
+        color: var(--color-white);
+        font-size: 1.2rem;
+        padding: 10px 20px; /* Espaçamento interno nos links */
+        display: block; /* Faz o link ocupar toda a largura */
+    }
+
+    .navbar ul li a:hover {
+        background: rgba(255, 255, 255, 0.1); /* Efeito de hover suave */
+        border-radius: 5px; /* Bordas arredondadas */
     }
 
     #person {
@@ -786,17 +832,45 @@ body {
         padding: 20px;
     }
 
-    .person-content, .person-background {
+    .person-content {
+        width: 100%;
+        text-align: center; /* Centralizar texto */
+    }
+
+    .person-background {
         width: 100%;
         height: auto;
+        padding: 20px 0;
     }
 
     .person-name {
         margin-top: 5rem;
     }
 
+    .person-name h1 {
+        font-size: 2.5rem; /* Títulos menores */
+        line-height: 3rem;
+    }
+
+    .stacks {
+        justify-content: center; /* Centralizar ícones */
+    }
+
     .stacks-content {
         margin-top: 3rem;
+    }
+
+    .stacks-content h3 {
+        font-size: 1.2rem; /* Texto menor */
+    }
+
+    .links {
+        margin-top: 20px; /* Espaçamento entre a foto e os ícones */
+    }
+
+    .links a img {
+        width: 25px; /* Ícones menores */
+        height: 25px;
     }
 
     .wrapper-profile-photo {
@@ -809,43 +883,131 @@ body {
         height: 200px;
     }
 
+
     #about {
         flex-direction: column;
         height: auto;
+        padding: 20px;
     }
 
-    .background-about, .box-about {
+    .background-about {
         width: 100%;
+        height: 300px; /* Altura fixa para a imagem */
     }
 
     .box-about {
-        padding: 1rem;
+        width: 100%;
+        padding: 20px;
+        text-align: center; /* Centralizar texto */
+    }
+
+    .section-subtitle h2 {
+        font-size: 2rem; /* Título menor */
+    }
+
+    .box-about h3 {
+        font-size: 1.5rem; /* Texto menor */
+        margin: 1rem 0;
+    }
+
+    .box-about h4 {
+        font-size: 1.2rem; /* Texto menor */
+        margin: 1rem 0;
+    }
+
+    .button-cta {
+        margin: 2rem auto; /* Centralizar botão */
+    }
+
+    #projects {
+        height: auto;
+        padding: 20px;
     }
 
     .projects-title h2 {
-        font-size: 2rem;
+        font-size: 2rem; /* Título menor */
+        text-align: center; /* Centralizar título */
     }
 
     .swiper {
         height: auto;
     }
 
-    .image-project img {
-        width: 100%;
-        height: 200px; /* Ajuste conforme necessário */
+    .image-project {
+        max-width: 200px; /* Imagem menor */
     }
 
     .card-project {
-        width: 100%;
+        width: 90%; /* Card mais estreito */
         height: auto;
+        margin: 0 auto; /* Centralizar card */
+
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .card-project span {
+        font-size: 1.5rem; /* Texto menor */
+    }
+
+    .card-project p {
+        font-size: 1rem; /* Texto menor */
+    }
+
+
+    .cta-project {
+        flex-direction: column; /* Botões em coluna */
+        gap: 10px;
+    }
+
+    .card-project, .button-cta a, .cta-project a {
+        border-radius: 10px;
+    }
+
+    #contacts {
+        height: auto;
+        padding: 20px;
+    }
+
+    .contact-icon-content h2 {
+        font-size: 2rem; /* Título menor */
+        text-align: center; /* Centralizar título */
     }
 
     .contact-icons-wrapper {
-        flex-direction: column;
+        flex-direction: column; /* Ícones em coluna */
+        align-items: center;
     }
 
     .contact-icon-content {
-        margin: 1rem 0;
+        margin: 1rem 0; /* Espaçamento entre ícones */
+    }
+
+    .contact-icon {
+        width: 50px; /* Ícones maiores */
+        height: 50px;
+    }
+
+    .contact-icon i {
+        font-size: 2.5rem; /* Ícones maiores */
+    }
+
+    .contact-info span {
+        font-size: 1.3rem; /* Texto maior */
+    }
+
+    .contact-info p, .contact-info a {
+        font-size: 1.1rem; /* Texto maior */
+    }
+
+    #footer {
+        height: auto;
+        padding: 20px;
+    }
+
+    .container-footer h2, .container-footer h3 {
+        font-size: 1.2rem; /* Texto menor */
+        text-align: center; /* Centralizar texto */
     }
 }
 
